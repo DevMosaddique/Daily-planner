@@ -1,0 +1,93 @@
+/* styles.css */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #121212;
+  color: #e0e0e0;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.container {
+  text-align: center;
+  background-color: #1e1e1e;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 600px;
+  animation: fadeIn 1s ease-in-out;
+  margin: 20px 0; /* Added margin for top and bottom spacing */
+}
+
+.schedule-item {
+  margin: 15px 0;
+  padding: 20px;
+  border: 1px solid #333;
+  border-radius: 8px;
+  background: linear-gradient(145deg, #333, #444);
+  color: #fff;
+  transition: all 0.6s ease, background 0.6s ease, opacity 0.6s ease;
+  position: relative;
+}
+
+.schedule-item:hover {
+  background: linear-gradient(145deg, #444, #555);
+  transform: scale(1.05);
+}
+
+.schedule-item.completed {
+  filter: brightness(0.5); /* Darken the completed tasks */
+}
+
+.schedule-item.highlight {
+  background: linear-gradient(145deg, #ffa726, #fb8c00, #f57c00);
+  font-weight: bold;
+  transition: transform 0.6s ease; 
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h1 {
+  font-weight: 700;
+  margin-bottom: 20px;
+  font-size: 2.5em;
+  background: linear-gradient(145deg, #ffa726, #fb8c00, #f57c00);
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: gradientShift 3s ease-in-out infinite alternate;
+}
+
+#countdown {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  background: linear-gradient(145deg, #ffa726, #fb8c00, #f57c00);
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: gradientShift 3s ease-in-out infinite alternate;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
